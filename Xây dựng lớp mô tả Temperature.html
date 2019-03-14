@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    độ F hiện tại là :
+    <p id="view1"></p>
+       độ K hiện tai là :
+    <p id="view2"></p>
+<script>
+    let MyTemperature = function (doC) {
+        this.doC = doC;
+        this.getDoF = function () {
+            let valueF = this.doC*1.8 +32;
+            document.getElementById("view1").innerHTML = valueF+" F";
+        };
+        this.getDok = function () {
+            let valueK = this.doC*273.15;
+            document.getElementById("view2").innerHTML = valueK+" K";
+        }
+    };
+    let temperature = new MyTemperature(25);
+    temperature.getDoF();
+    temperature.getDok();
+</script>
+</body>
+</html>
